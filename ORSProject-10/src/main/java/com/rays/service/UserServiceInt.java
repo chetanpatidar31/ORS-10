@@ -10,6 +10,10 @@ public interface UserServiceInt extends BaseServiceInt<UserDTO> {
 
 	public UserDTO register(UserDTO dto, UserContext userContext);
 
-	public UserDTO authenticate(String loginId, String password);
+	public UserDTO authenticate(String name, String password);
+
+	public UserDTO forgetPassword(String loginId);
+
+	public UserDTO changePassword(String loginId, String oldPassword, String newPassword, UserContext userContext);
 
 }
